@@ -1,0 +1,346 @@
+html {
+    font-size: 15px;
+  }
+  
+  * {margin: 0;padding:0}
+
+.mywork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.mywork-title{
+    position: relative;
+}
+.mywork-title h1{
+    padding: 0px 30px;
+    font-size: 70px;
+    font-weight: 600;
+}
+.mywork-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+
+.project-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    /* background: rgb(34,193,195); */
+  /* background: linear-gradient(319deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+  }
+  
+  .project-card {
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.2%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    position: relative;
+    padding: 20px 20px 25px 150px;
+    margin: 150px 150px; 
+  }
+  
+  .project-card:hover{
+    border-color: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.2%);
+}
+
+  .project-card img {
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #222;
+    left: 0;
+    transform: translate(-50%, -50%)
+  }
+  
+  .project-card a {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    transform: translate(-30%, 50%);
+    background: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    line-height: 1.2;white-space: pre-line;
+  }
+  .project-card a:hover{
+    border: 2px solid white;
+}
+  
+  .project-card h2 {
+    font-size: 2rem;
+    margin: 0 0 .3rem 0; 
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    line-height: 1.3
+  }
+
+  .nav-link {
+    display: block; /* Ensure the link behaves like a block-level element */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color from parent */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
+  }
+  
+  /* Ensure the cards inside nav-link have proper styling */
+  .nav-link .project-card-sm {
+    width: 100%; /* Ensure the card fills the width of its container */
+    height: auto; /* Adjust height based on content */
+  }
+
+
+
+
+  /* Media query for max-width 1024px */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 90%;
+    padding: 20px;
+    margin: 30px auto;
+  }
+  .mywork-title h1{
+    padding: 0px 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+  .project-card img {
+    width: 180px;
+    height: 140px;
+  }
+
+  .project-card h2 {
+    font-size: 1.8rem;
+    margin-top: 30px; /* Ensuring title is below the image */
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for max-width 800px */
+@media (max-width: 935px) {
+  .project-section {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+
+  .project-card {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .mywork-title h1{
+    padding: 0px 30px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+  .project-card img {
+    width: 160px;
+    height: 120px;
+  }
+
+  .project-card h2 {
+    font-size: 1.6rem;
+    margin-top: 30px; /* Ensuring title is below the image */
+    margin-left: 50px;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card a {
+    transform: translate(-25%, 50%);
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  padding: 20px; /* Padding around the container */
+}
+
+.project-card-sm {
+  width: 300px; /* Set width of the card */
+  height: 400px; /* Set height of the card */
+  margin: 10px; /* Margin around each card */
+  padding: 20px;
+  background: #fff; /* White background for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* For positioning the gradient border */
+  overflow: hidden; /* Ensure child elements don't overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+.card-border-gradient {
+  position: absolute; /* Position gradient border inside card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0066, #ffcc00); /* Gradient border */
+  opacity: 0.2; /* Slightly visible gradient */
+  z-index: 1; /* Place above the card content */
+}
+
+.card-container {
+  position: relative; /* Position content above the gradient border */
+  z-index: 2;
+}
+
+.card-container img {
+  width: 100%;
+  height: 60%; /* Set height of the image */
+  object-fit: cover; /* Ensure image covers the container without distortion */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+.wrapper h1 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #333; /* Dark text color */
+}
+
+.wrapper p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666; /* Lighter text color */
+  line-height: 1.4; /* Line height for readability */
+}
+
+.wrapper button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ff0066; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Animation for hover effect */
+}
+
+.wrapper button:hover {
+  background: #ffcc00; /* Button background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.project-card-sm:hover {
+  transform: scale(1.02); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+
+
+
+
+
+
+
+/* Media query for max-width 600px */
+@media (max-width: 600px) {
+  .project-section {
+    padding: 20px 0;
+  }
+
+  .project-card {
+    width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .project-card img {
+    width: 140px;
+    height: 100px;
+  }
+
+  .project-card h2 {
+    font-size: 1.4rem;
+    margin-top: 50px; /* Ensuring title is below the image */
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .project-card a {
+    transform: translate(-20%, 50%);
+    padding: 6px 12px;
+  }
+}
+
+/* Media query for max-width 350px */
+@media (max-width: 350px) {
+  .project-section {
+    padding: 15px 0;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .project-card img {
+    width: 120px;
+    height: 90px;
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem;
+    margin-top: 100px; /* Ensuring title is below the image */
+  }
+
+  .project-card p {
+    font-size: 0.7rem;
+  }
+
+  .project-card a {
+    transform: translate(-15%, 50%);
+    padding: 4px 8px;
+  }
+}
