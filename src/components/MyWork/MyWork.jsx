@@ -1,7 +1,6 @@
 import React from "react";
 import "../MyWork/MyWork.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
-import { motion } from "framer-motion";
 import fp_3 from "../../assets/fp_3.png";
 import fp_1 from "../../assets/fp_1.png";
 import fp_2 from "../../assets/fp_2.png";
